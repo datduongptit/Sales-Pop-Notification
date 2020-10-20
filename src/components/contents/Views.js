@@ -37,7 +37,7 @@ const Views = () => {
         <>
         <Card>
             <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
-                <Card.Section title={tabs[selected].content}>
+                <Card.Section>
                     <p>{tabs[selected].component}</p>
                 </Card.Section>
             </Tabs>
