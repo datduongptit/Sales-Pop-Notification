@@ -22,7 +22,7 @@ const ShowCustom = () => {
                         <TextStyle variation='strong'>Show Custiom Order</TextStyle>
                     </Layout.Section>
                     <Layout.Section>
-                        <div style={{width:'250px'}}>
+                        <div className='input-md'>
                             <Select
                                 options={options1}
                                 onChange={handleSelectChange}
@@ -39,7 +39,7 @@ const ShowCustom = () => {
                             <TextStyle variation='strong'>Number of Live Order to show</TextStyle>
                         </Layout.Section>
                         <Layout.Section>
-                            <div style={{width:'100px'}}>
+                            <div className='input-sm'>
                                 <TextField type='number' value= {value} onChange={handleChangeField} />
                             </div>
                         </Layout.Section> 

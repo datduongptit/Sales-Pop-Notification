@@ -50,6 +50,9 @@
   margin-bottom: 15px;
 }
 
+.mt-3 {
+  margin-top: 15px;
+}
 
 .img {
   width: 190px;
@@ -61,7 +64,6 @@
     width: 100%;
     height: 100%;
   }
-
 }
 
 @media (min-width: 576px) {
@@ -86,4 +88,36 @@
 
 .img {
   width: 100%;
+}
+
+.input-md {
+  width: 250px;
+}
+
+.input-sm {
+  width: 250px;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.note-text {
+  width: 800px;
+  padding: 15px 0;
+  color: #b4b0b0;
+  font-size: 14px;
+}
+
+.time-display {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.seconds {
+  padding-left: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #3f729b;
 }

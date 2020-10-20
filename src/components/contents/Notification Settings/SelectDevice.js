@@ -16,7 +16,7 @@ const SelectDevice = () => {
         <div className='mb-3'>
           <Layout >
                 <Layout.Section secondary>
-                    <TextStyle variation='strong'>Select Date Format</TextStyle>
+                    <TextStyle variation='strong'>Select show device</TextStyle>
                 </Layout.Section>
                 <Layout.Section>
                     <div style={{width:'250px'}}>

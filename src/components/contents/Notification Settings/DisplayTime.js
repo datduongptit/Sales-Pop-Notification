@@ -17,21 +17,21 @@ const DisplayTime = () => {
                     <TextStyle variation='strong'>Next time display</TextStyle>
                 </Layout.Section>
                 <Layout.Section>
-                    <div style={{width:'200px', display:'flex', alignItems:'center'}}>
+                    <div className='time-display'>
                         <TextField type='number' value= {value} onChange={handleChangeField}/>
-                        <span style={{paddingLeft:'40px', fontWeight:700, fontSize: '16px', color: '#3f729b'}}>seconds</span>
+                        <span className='seconds'>seconds</span>
                     </div>
                 </Layout.Section> 
             </Layout>
             </div>
             <Layout>
                 <Layout.Section secondary>
-                    <TextStyle variation='strong'>Next time display</TextStyle>
+                    <TextStyle variation='strong'>Display time</TextStyle>
                 </Layout.Section>
                 <Layout.Section>
-                    <div style={{width:'200px', display:'flex', alignItems:'center'}}>
+                    <div className='time-display'>
                         <TextField type='number' value= {value1} onChange={handleChangeField1}/>
-                        <span style={{paddingLeft:'40px', fontWeight:700, fontSize: '16px',color: '#3f729b'}}>seconds</span>
+                        <span className='seconds'>seconds</span>
                     </div>
                 </Layout.Section> 
             </Layout>

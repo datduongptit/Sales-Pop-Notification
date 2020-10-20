@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from 'react'
 import {TextStyle, Layout, TextField} from '@shopify/polaris';
-import color from '../../images/color.png'
+import color from '../../../images/color.png'
 
 const ColorPick = () => {
     const [value, setValue] = useState('5');
@@ -45,7 +45,7 @@ const ColorPick = () => {
                         <TextStyle variation='strong'>Border Radius</TextStyle>
                     </Layout.Section>
                     <Layout.Section>
-                        <div style={{width: '100px'}}>
+                        <div className='input-sm'>
                                 <TextField type='number' value= {value} onChange={handleChangeField} />
                         </div>
                     </Layout.Section> 
