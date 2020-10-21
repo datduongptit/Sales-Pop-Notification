@@ -1,6 +1,5 @@
 import React, {useState, useCallback} from 'react'
 import {TextStyle, Layout, TextField} from '@shopify/polaris';
-import color from '../../../images/color.png'
 
 const ColorPick = () => {
     const [value, setValue] = useState('5');

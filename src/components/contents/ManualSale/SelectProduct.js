@@ -1,12 +1,8 @@
 import React, {useState, useCallback} from 'react'
-import {TextStyle, Layout, Select, FormLayout, TextField} from '@shopify/polaris';
+import {TextStyle, Layout, Select} from '@shopify/polaris';
 const SelectProduct = () => {
     const options = [
         {label: 'Select Customer', value: 'Select Customer'},
-        {label: 'Waiting API', value: 'Waiting API'},
-        {label: 'Waiting API', value: 'Waiting API'},
-        {label: 'Waiting API', value: 'Waiting API'},
-        {label: 'Waiting API', value: 'Waiting API'},
         {label: 'Waiting API', value: 'Waiting API'},
     ];
 

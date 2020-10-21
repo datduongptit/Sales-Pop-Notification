@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from 'react'
-import {TextStyle, Layout, TextField, Checkbox} from '@shopify/polaris';
+import {TextStyle, Layout, Checkbox} from '@shopify/polaris';
 import position_1 from '../../../images/position_1.png'
 import position_2 from '../../../images/position_2.jpg'
 import position_3 from '../../../images/position_3.jpg'
@@ -27,7 +27,7 @@ const Position = () => {
                     <div style={{padding: 0}}>
                         <ul className='img-list' style={{display:'flex', justifyContent:'space-between', listStyle:'none', marginLeft: 0, padding: 0}}>
                             <li>
-                                <img className='img' src={position_1}/>
+                                <img alt='Nothing' className='img' src={position_1}/>
                                 <br/>
                                 <div style={{textAlign:'center'}}>
                                     
@@ -39,7 +39,7 @@ const Position = () => {
                                 </div>
                             </li>
                             <li>
-                                <img className='img' src={position_2}/>
+                                <img alt='Nothing' className='img' src={position_2}/>
                                 <br/>
                                 <div style={{textAlign:'center'}}>
                                     
@@ -51,7 +51,7 @@ const Position = () => {
                                 </div>
                             </li>
                             <li>
-                                <img className='img' src={position_3}/>
+                                <img alt='Nothing' className='img' src={position_3}/>
                                 <br/>
                                 <div style={{textAlign:'center'}}>
                                     
@@ -63,7 +63,7 @@ const Position = () => {
                                 </div>
                             </li>
                             <li>
-                                <img className='img' src={position_4}/>
+                                <img alt='Nothing' className='img' src={position_4}/>
                                 <br/>
                                 <div style={{textAlign:'center'}}>
                                     

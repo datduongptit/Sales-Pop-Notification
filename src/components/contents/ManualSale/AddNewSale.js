@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Page, Card, DataTable} from '@shopify/polaris';
+import {Card, DataTable} from '@shopify/polaris';
 import AddModal from './AddModal';
 
 

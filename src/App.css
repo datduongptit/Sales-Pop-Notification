@@ -95,11 +95,24 @@
 }
 
 .input-sm {
-  width: 250px;
+  width: 150px;
+}
+
+.input-ssm {
+  width: 80px;
+  height: 35px;
 }
 
 .p-0 {
   padding: 0;
+}
+
+.ml-5 {
+  margin-left: 25px;
+}
+
+.mr-5 {
+  margin-right: 25px;
 }
 
 .note-text {

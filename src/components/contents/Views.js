@@ -5,7 +5,7 @@ import ManualSale from './ManualSale';
 import RealtimeSettings from './RealtimeSettings';
 
 const Views = () => {
-    const [selected, setSelected] = useState(0);
+    const [selected, setSelected] = useState(2);
 
   const handleTabChange = useCallback(
     (selectedTabIndex) => setSelected(selectedTabIndex),
@@ -38,7 +38,7 @@ const Views = () => {
         <Card>
             <Tabs tabs={tabs} selected={selected} onSelect={handleTabChange}>
                 <Card.Section>
-                    <p>{tabs[selected].component}</p>
+                    <div>{tabs[selected].component}</div>
                 </Card.Section>
             </Tabs>
         </Card>

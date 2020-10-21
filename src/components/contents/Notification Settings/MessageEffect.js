@@ -1,5 +1,5 @@
-import React, {useCallback, useState} from 'react'
-import {TextStyle, Layout, Select} from '@shopify/polaris';
+import React from 'react'
+import {TextStyle, Layout} from '@shopify/polaris';
 
 const MessageEffect = () => {
     return (

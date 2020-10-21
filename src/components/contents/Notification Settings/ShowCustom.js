@@ -33,7 +33,7 @@ const ShowCustom = () => {
                 </Layout>
             </div>
             {selected === 'Random' ? (
-                <div cclassName='mb-3'>
+                <div className='mb-3'>
                     <Layout>
                         <Layout.Section secondary>
                             <TextStyle variation='strong'>Number of Live Order to show</TextStyle>

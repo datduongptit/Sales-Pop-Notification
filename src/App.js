@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {AppProvider, Page, Card, Button} from '@shopify/polaris';
+import {AppProvider} from '@shopify/polaris';
 import enTranslations from '@shopify/polaris/locales/en.json';
 import Header from './components/header/Header'
 import Navbar from './components/header/Navbar';

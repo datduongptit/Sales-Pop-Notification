@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from 'react';
-import {Button, Modal, TextField, Layout, Checkbox, TextStyle} from '@shopify/polaris';
+import {Button, Modal, Layout, Checkbox, TextStyle} from '@shopify/polaris';
 import Customer from './Customer';
 import SelectCustomer from './SelectCustomer';
 import SelectProduct from './SelectProduct';
