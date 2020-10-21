@@ -1,17 +1,21 @@
 import React from 'react';
 import './App.css';
-import {AppProvider} from '@shopify/polaris';
+import { Provider } from 'react-redux';
+import { AppProvider } from '@shopify/polaris';
 import enTranslations from '@shopify/polaris/locales/en.json';
 import Header from './components/header/Header'
 import Navbar from './components/header/Navbar';
 import Views from './components/contents/Views'; 
+import store from './store';
 function App() {
   return (
-    <AppProvider i18n={enTranslations}>
-      <Header />
-      <Navbar />
-      <Views />
-    </AppProvider>
+    <Provider store={store}>
+      <AppProvider i18n={enTranslations}>
+        <Header />
+        <Navbar />
+        <Views />
+      </AppProvider>
+    </Provider>
   );
 }
 
