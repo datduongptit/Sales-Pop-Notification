@@ -12,6 +12,7 @@ import MessageEffect from './Notification Settings/MessageEffect';
 import Position from './Notification Settings/Position';
 import ColorPick from './Notification Settings/ColorPicker';
 import NotifyFooter from './Notification Settings/NotifyFooter';
+import Notification from './Notification Settings/Notification'
 
 const NotificationSettings = () => {    
     return (

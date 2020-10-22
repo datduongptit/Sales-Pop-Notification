@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Layout, Icon} from '@shopify/polaris';
+import {Button, Layout, Icon, Form} from '@shopify/polaris';
 import {
     QuestionMarkMajor
   } from '@shopify/polaris-icons';

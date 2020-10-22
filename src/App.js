@@ -13,6 +13,7 @@ function App() {
       <AppProvider i18n={enTranslations}>
         <Header />
         <Navbar />
+        {console.log(store.getState())}
         <Views />
       </AppProvider>
     </Provider>

@@ -136,3 +136,29 @@
 }
 
 /* Show demo */
+#show-demo {
+  position: fixed;
+  width: 406px;
+  min-height: 100px;
+  bottom: 15px;
+  box-shadow: 6px -5px 19px 0px rgba(0, 0, 0, 0.75);
+  background-size: cover;
+  background-color: aliceblue;
+  z-index: 1000;
+  padding: 0;
+}
+
+.img_demo {
+  height: 100px;
+  width: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgb(8, 1, 1);
+}
+
+.hide_demo {
+  margin-left: 250px;
+  font-size: 1.8rem;
+  cursor: pointer;
+}

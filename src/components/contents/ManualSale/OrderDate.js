@@ -9,7 +9,7 @@ const OrderDate = () => {
                     <TextStyle variation='strong'>Custom Text</TextStyle>
                 </Layout.Section>
                 <Layout.Section>
-                    <input style={{width: '90%', height: '40px'}} type='date' />
+                    <input style={{width: '90%', height: '40px'}} type='datetime-local' />
                 </Layout.Section> 
             </Layout> 
         </div>
