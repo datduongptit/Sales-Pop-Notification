@@ -26,7 +26,7 @@ const LayoutPopup = () => {
                                 checked={checked}
                                 onChange={handleChange}
                             />
-                            <div style={{background: `linear-gradient(90deg,${colorLeft}, ${colorRight})`, width: 600, height: 50, display: "inline-block", borderRadius: 15}}></div>
+                            <div className='gradient' style={{background: `linear-gradient(90deg,${colorLeft}, ${colorRight})`}}></div>
                         </Layout.Section>
                         <div className="mt-3 mb-3">
                             <span style={{fontWeight:600, padding: 15}}>Background left</span>
@@ -42,7 +42,7 @@ const LayoutPopup = () => {
                             checked={!checked}
                             onChange={handleChange}
                         />
-                        <div style={{backgroundColor: color, width: 600, height: 50, display: "inline-block", borderRadius: 15, alignItems:'center'}}><span style={{color:`${colorText}`, fontWeight:600, marginLeft: 50, marginTop: 50, alignItems: 'center', fontSize: 16}}>Real time people visitors right now</span></div>
+                        <div className='gradient' style={{backgroundColor: color}}><span style={{color:`${colorText}`, fontWeight:600, marginLeft: 50, marginTop: 50, alignItems: 'center', fontSize: 16}}>Real time people visitors right now</span></div>
                     </Layout.Section>
                     <div className="mt-3">
                         <input type='color' value={color} className='color' onChange={e => setColor(e.target.value)} />

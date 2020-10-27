@@ -1,6 +1,8 @@
 import {combineReducers} from 'redux';
-import notification from './notification'
+import manualSale from './/manualSale';
+import alert from './alert'
 
 export default combineReducers({
-    notification
+    manualSale,
+    alert
 })

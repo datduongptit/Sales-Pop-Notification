@@ -13,9 +13,9 @@ const OrderStatus = () => {
                     <OptionList
                     onChange={setSelected}
                     options={[
-                      {value: 'online_store', label: 'Online Store'},
-                      {value: 'messenger', label: 'Messenger'},
-                      {value: 'facebook', label: 'Facebook'},
+                      {value: 'Pending', label: 'Pending'},
+                      {value: 'Paid', label: 'Paid'},
+                      {value: 'Refunded', label: 'Refunded'},
                     ]}
                     selected={selected}
                     allowMultiple>

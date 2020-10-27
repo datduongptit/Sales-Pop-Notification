@@ -1,39 +1,31 @@
-import React from 'react'
-import {Card, DataTable} from '@shopify/polaris';
+import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import AddModal from './AddModal';
+import {connect} from 'react-redux'
+import {getProducts} from '../../../actions/manualSale'
+import ProductItems from './ProductItems';
+import Alert from '../../Alert';
 
-
-const AddNewSale = () => {
-    const rows = [
-    
-    ]
+const AddNewSale = ({getProducts, manualSale: {products}}) => {
+    useEffect(() => {
+        getProducts()
+    }, [getProducts])
     return (
         <div>
             <AddModal />
-                <Card>
-                    <DataTable
-                    columnContentTypes={[
-                        'text',
-                        'text',
-                        'text',
-                        'numeric',
-                        'numeric',
-                        'numeric',
-                    ]}
-                    headings={[
-                        'FIRST NAME',
-                        'CITY',
-                        'PRODUCT SELECTED',
-                        'ORDER DATE/TIME',
-                        'CLICKED TIMES',
-                        'IGNORED TIMES',
-                        'ACTION'
-                    ]}
-                    rows={rows}
-                    />
-                </Card>
+            <Alert />
+            <ProductItems />
         </div>
     )
 }
 
-export default AddNewSale
+AddNewSale.propTypes = {
+    getProducts: PropTypes.func.isRequired,
+    manualSale: PropTypes.object.isRequired,
+}
+
+const mapStateToProps = (state) => ({
+    manualSale: state.manualSale
+})
+
+export default connect(mapStateToProps, {getProducts})(AddNewSale)

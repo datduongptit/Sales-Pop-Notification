@@ -14,7 +14,7 @@ import ColorPick from './Notification Settings/ColorPicker';
 import NotifyFooter from './Notification Settings/NotifyFooter';
 import Notification from './Notification Settings/Notification'
 
-const NotificationSettings = () => {    
+const NotificationSettings = () => { 
     return (
         <div className='container'>
             <div style={{textAlign:'right'}}>
@@ -43,6 +43,7 @@ const NotificationSettings = () => {
             <ColorPick />
 
             <NotifyFooter />
+
         </div>
     )
 }

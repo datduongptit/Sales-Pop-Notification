@@ -1,18 +1,14 @@
 import React, {useState, useCallback, useEffect} from 'react'
 import {TextStyle, Layout} from '@shopify/polaris';
 import Notification from './Notification'
-import {changeState} from '../../../actions/notification';
 import {connect} from 'react-redux';
-const MessageEffect = ({changeState, notification}) => {
+const MessageEffect = () => {
     const [formData, setFormData] = useState('bounce');
     const {display} = formData;
 
     const [formHide, setFormHide] = useState('bounce');
     const {hidden} = formHide;
 
-    useEffect(() => {
-        changeState(!notification.display)
-    }, [notification.display])
 
     const onChange= (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
@@ -22,7 +18,6 @@ const MessageEffect = ({changeState, notification}) => {
         setFormHide({...formHide, [e.target.name]: e.target.value});
     }
 
-    console.log(notification.display);
     return (
         <div className='mb-3'>
             <form>
@@ -77,8 +72,5 @@ const MessageEffect = ({changeState, notification}) => {
     )
 }
 
-const mapStateToProps = state => ({
-    notification: state.notification
-})
 
-export default connect(mapStateToProps, {changeState})(MessageEffect)
+export default connect()(MessageEffect)
