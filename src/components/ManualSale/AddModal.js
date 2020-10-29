@@ -1,11 +1,11 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useState} from 'react';
 import {Button, Modal, Layout, Checkbox, TextStyle, Select} from '@shopify/polaris';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {addProduct, getProduct} from '../../../actions/manualSale';
-import { check } from 'express-validator';
+import {addProduct, getProduct} from '../../actions/manualSale';
 
 const AddModal = ({addProduct, manualSale, getProduct}) => {
+
     const [active, setActive] = useState(false);
     const handleChange = useCallback(() => setActive(!active), [active]);
 
@@ -14,7 +14,11 @@ const AddModal = ({addProduct, manualSale, getProduct}) => {
       {label: 'Waiting API', value: 'Waiting API'},
       {label: 'Waiting me', value: 'Waiting me'},
       {label: 'Waiting API', value: 'Waiting API'},
+      {label: 'Computer', value: 'Computer'},
+      {label: 'Mouse', value: 'Mouse'},
     ]
+
+    const [selected, setSelected] = useState('Select Customer');
     const customers = [
       {label: '', value: ''},
     ]
@@ -22,36 +26,34 @@ const AddModal = ({addProduct, manualSale, getProduct}) => {
     const [checked, setChecked] = useState(true);
     // const handleChangeCheck = useCallback((newChecked) => setChecked(newChecked), []);
 
+
     const options = [
       {label: 'Select Customer', value: 'Select Customer'},
       {label: 'Add Customer', value: 'Add Customer'}
     ];
 
-    const [selected, setSelected] = useState('Select Customer');
 
     const handleSelectChange = useCallback((value) => setSelected(value), []);
     const initialState = {
-      publishOrder: checked,
+      publishOrder: '',
       firstName: '',
       lastName: '',
       city: '',
       product: '',
-      order: new Date().now,
+      order: '',
     }
-
-    const changeChecked = (e) => {
-      console.log(e.target.checked);
-      setChecked(!checked);
-    }
-    
     
     const [formData, setFormData] = useState(initialState);
-
+    
+    formData.publishOrder = checked;  
     const {publishOrder, firstName, lastName, city, product, order} = formData;
     const onChange = (e) =>  {setFormData({...formData, [e.target.name]: e.target.value})};
+    console.log(publishOrder);
+
     const onSubmit = (e) => {
       e.preventDefault();
       addProduct(formData);
+      setFormData(initialState)
       handleChange();
     }
 
@@ -83,11 +85,10 @@ const AddModal = ({addProduct, manualSale, getProduct}) => {
                           <TextStyle variation='strong'>Publish Order</TextStyle>
                       </Layout.Section>
                       <Layout.Section>
-                          <input type='checkbox' name='pulishOrder' value={checked} checked={checked} onChange={() => setChecked(!checked)} />
+                          <input type='checkbox' name='publishOrder' value={checked} checked={checked} onChange={() => setChecked(!checked)} />
                       </Layout.Section> 
                   </Layout>
                 </div>
-              {console.log(publishOrder)}
                 {/* <Customer /> */}
                 <div className='mb-3'>
                   <Layout >
@@ -112,7 +113,7 @@ const AddModal = ({addProduct, manualSale, getProduct}) => {
                         </Layout.Section>
                         <Layout.Section>
                             <div className="mb-3">
-                                <input className=" input-form" name='firstName' value={firstName} onChange={onChange} placeholder='First name' />
+                                <input required className=" input-form" name='firstName' value={firstName} onChange={onChange} placeholder='First name' />
                             </div>
                             <div className="mb-3">
                                 <input className=" input-form" name='lastName' value={lastName} onChange={onChange} placeholder='Last name' />
@@ -173,7 +174,7 @@ const AddModal = ({addProduct, manualSale, getProduct}) => {
                         <TextStyle variation='strong'>Custom Text</TextStyle>
                     </Layout.Section>
                     <Layout.Section>
-                        <input onChange={onChange} value={order} style={{width: '90%', height: '40px', backgroundColor: '#fcfdfd', borderRadius: '4px', border: '1px solid rgb(209, 202, 202)', boxShadow: '-2px 4px 19px 1px rgba(230, 227, 227, 0.75)'}} type='datetime-local' />
+                        <input onChange={onChange} name='order' value={order} style={{width: '90%', height: '40px', backgroundColor: '#fcfdfd', borderRadius: '4px', border: '1px solid rgb(209, 202, 202)', boxShadow: '-2px 4px 19px 1px rgba(230, 227, 227, 0.75)'}} type='datetime-local' />
                     </Layout.Section> 
                   </Layout> 
                 </div>

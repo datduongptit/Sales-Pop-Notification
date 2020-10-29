@@ -231,7 +231,7 @@
 .alert-success {
   background: var(--success-color);
   color: #fff;
-  width: 20%;
+  width: 30%;
   align-items: center;
 }
 
